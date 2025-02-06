@@ -1,0 +1,426 @@
+.link-ancora.ativo {
+  background: #facd52; /* Cor de fundo para o link ativo */
+  color: #fff; /* Cor do texto para o link ativo */
+}
+ 
+ html, body {
+  overflow: scroll;  
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}  
+
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  padding: 0 35px 20px 0;
+  border: 1px solid #ffffff;
+}
+
+body {
+  font-family: 'Open Sans', serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  border: 1px solid #cacaca;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #fff;
+  color: #d2761f;
+  margin-top: 20px;
+}
+
+button:hover { background: #ffdf52; color: #fff; border-color: #2D3E48; }
+
+/* Banner */
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh; /* Altura do banner para cobrir a tela inteira */
+  z-index: 1; /* Coloca o banner atrás do conteúdo */
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ajuste no conteúdo para passar por cima do banner */
+.conteudo {
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo na frente do banner */
+  background-color: white; /* Fundo branco para o conteúdo */
+  margin-top: 60vh; /* Margem superior igual à altura do banner */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh; /* Reduz a altura do banner em telas menores */
+  }
+
+  .banner img {
+    object-fit: cover; /* Mantém a imagem cobrindo o espaço */
+    object-position: 4%; /* Foca na parte esquerda da imagem */
+  }
+}
+.informacao {
+  background: #b1b1b1 url(../img/Direito.png) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 45px 0;
+  color: #ffffff;
+  }
+
+.informacao h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0 0 0 0px;
+  font-weight: bold;
+  max-width: 620px;
+  font-size: 400px;
+  margin: 0px;
+  }
+
+  /* Periodos */
+.interno {
+  padding: 40px 0;
+}
+
+.interno h2 {
+  margin: 0;
+}
+
+.conteudo .periodo {
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  background: #e6e6e6;
+  padding: 25px 0;
+}
+
+.conteudo .periodo .titulo-interior h3 {
+  padding-left: -0px;
+  padding-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #424242;
+  font-size: 35px;
+  margin: 0;
+  height: 72px;
+}
+
+.conteudo .periodo .titulo-interior span {
+  position: absolute;
+  color: #f19100;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 50px;
+  left: 15px;
+}
+
+.conteudo .periodo .lista-periodos ul {
+  list-style: none;
+  padding: 100;
+}
+
+.conteudo .periodo .lista-periodos ul li {
+  display: table;
+  margin-top: 20px;
+  margin-right: 8px;
+  float: left;
+}
+/* botões de periodos */
+.conteudo .periodo .lista-periodos ul li a {
+  font-size: 18px;
+  color: #424242;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle; 
+  text-align: center;
+  height: 45px;
+  width: 50px;
+  background: hsl(0, 0%, 94%);
+}
+
+.conteudo .periodo .lista-periodos ul li a:hover,
+.conteudo .periodo .lista-periodos ul li a.ativo {
+  color: #fff;
+  background: #facd52;
+}
+
+li:hover ul { display: block; }
+
+.link-ancora {
+  text-decoration: none;
+  color: #ff9100;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link-ancora:hover {
+  color: #ffc400;
+  transform: scale(1.1);
+}
+
+/* Cartões Diciplinas */
+.link-ancora-diciplina {
+  text-decoration: none;
+  color: #ff9100;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link-ancora-diciplina:hover {
+  color: #ffc400;
+  transform: scale(1.01);
+}
+
+.conteudo .disciplinas {
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  padding: 0px 0px 0px;
+}
+.nome-diciplina{
+  color: #248880;
+  font-weight: bold;
+}
+
+/* Titulo Diciplina */
+.conteudo .disciplinas .titulo-interior h3 {
+  padding-top: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #358285;
+  font-size: 26px;
+  margin: 0 0 30px 23px;
+
+}
+
+.conteudo .disciplinas .titulo-interior h5 {
+  height: 42px;
+ 
+}
+
+
+.conteudo .disciplinas .titulo-interior span {
+  position: absolute;
+  color: #424242;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 400px;
+  left: 97px;
+}
+
+.conteudo .disciplinas .disciplinas-blocos .bloco a {
+  display: block;
+  background: #e6e6e6;
+  padding: 10px 15px;
+  color: #d46b24;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.conteudo .disciplinas .disciplinas-blocos .bloco a span {
+  display: block;
+  color: #2D3E48;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.conteudo .disciplinas .disciplinas-blocos .bloco a:hover,
+.conteudo .disciplinas .disciplinas-blocos .bloco a:hover span,
+.conteudo .disciplinas .disciplinas-blocos .bloco a.ativo,
+.conteudo .disciplinas .disciplinas-blocos .bloco a.ativo span {
+    color: #fff;
+    background: #ffac3f;
+}
+
+.conteudo .disciplinas .disciplinas-informacao {
+  margin-top: 35px;
+  font-size: 13px;
+  color: #2e3d46;
+}
+
+.conteudo .disciplinas #disciplina-titulo {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.conteudo .disciplinas .disciplinas-informacao .row {
+  border-top: 5px solid #e6e6e6;
+  padding-top: 25px;
+}
+
+
+.conteudo .disciplinas .disciplinas-informacao h4,
+.conteudo .disciplinas .disciplinas-informacao h4 a:hover 
+ {
+  color: #313131;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.conteudo .disciplinas .disciplinas-informacao h4 a {
+  text-decoration: none;
+  color: #329770;
+}
+
+
+.conteudo .disciplinas .disciplinas-informacao p {
+  text-transform: unset;
+  margin: 0;
+}
+
+.conteudo .disciplinas .disciplinas-informacao p strong {
+  display: block;
+  margin-top: 10px;
+  color: #131313;
+}
+
+.conteudo .disciplinas .disciplinas-informacao p.descricao {
+  text-transform: none;
+}
+/* 4. Footer
+-----------------------------------------------------*/
+footer {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #3f3f3f;
+  padding: 45px 0;
+  text-align: left;
+  color: #fff;
+  margin-top: -1px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p strong {
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+/* 5. Media Query
+-----------------------------------------------------*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  header .header-conteudo .logo {
+    text-align: left;
+  }
+
+  header .header-conteudo .logo-ufv {
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  .conteudo .cursos .col-sm-3 {
+    padding-right: 1px !important;
+    padding-left: 1px !important;
+  }
+
+  .conteudo .periodo .lista-periodos ul li {
+    margin-top: 0;
+  }
+
+  .conteudo .disciplinas .disciplinas-blocos .col-sm-4 {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+  }
+
+  .conteudo .disciplinas .disciplinas-blocos .bloco a {
+    min-height: 140px;
+  }
+
+  .conteudo .disciplinas .disciplinas-informacao .col-sm-12,
+  .conteudo .disciplinas .disciplinas-relacionadas .col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .conteudo .disciplinas .disciplinas-informacao .col-sm-12 .col-sm-12 ,
+  .conteudo .disciplinas .disciplinas-relacionadas .col-sm-12 .col-sm-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .conteudo .disciplinas .disciplinas-blocos .bloco a {
+    min-height: 110px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .conteudo .disciplinas .disciplinas-blocos .bloco a {
+    min-height: 100px;
+  }
+}
+
+/* Estilo do botão */
+#back-to-top {
+  display: none; /* Esconde o botão inicialmente */
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px; /* Distância do fundo */
+  right: 20px; /* Distância da direita */
+  width: 39px; /* Largura do botão */
+  height: 39px; /* Altura do botão */
+  border-radius: 50%; /* Deixa o botão redondo */
+  background-color: #e6e6e6; /* Cor */
+  color: #424242be; /* Cor do ícone */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  font-size: 18px; /* Tamanho do ícone */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  transition: background-color 0.3s ease; /* Transição suave */
+  z-index: 1000; /* Garante que o botão fique acima de tudo */
+  opacity: 0; /* Inicialmente transparente */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transição suave */
+  transform: translateY(20px); /* Inicialmente deslocado para baixo */
+}
+
+#back-to-top.show {
+  opacity: 1; /* Torna o botão visível */
+  transform: translateY(0); /* Retorna à posição original */
+}
+
+#back-to-top:hover {
+  background-color: rgba(61, 61, 61, 0.502); /* Muda a cor ao passar o mouse */
+  color: rgb(255, 255, 255);
+  transform: scale(1.2);
+  transition: transform 1.0s ease, color 0.5s ease;
+}
+/* Estilos existentes */
+.disciplinas-blocos {
+  margin: 20px;
+}
+/* Teste -----------
+---------------------
+-------------
+--------------*/
+
